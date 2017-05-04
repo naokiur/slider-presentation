@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Slide from './Slide.js'
+import GoLink from './GoLink'
 
 export default class SlideRoot extends Component {
 
@@ -11,19 +12,19 @@ export default class SlideRoot extends Component {
         ];
 
         const divStyle = {
-            color : 'red',
             margin : '5%'
         };
 
         return (
             <div style={divStyle}>
+                Hello SlideRoot!!
+                <GoLink />
                 {
                     data.map((d) => (
                         <Slide name={d.name} color={d.color} />
                     ))
                 }
-
-                Hello SlideRoot!!</div>
+            </div>
         )
     }
 }
