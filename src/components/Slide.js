@@ -4,15 +4,26 @@ export default class Slide extends Component {
     constructor() {
         super();
         this.state = {
-            hidden: true
+            hidden: false
         };
     }
 
     render() {
-        const slideStyle = this.state.hidden ? {display: 'none'} : {};
+        const titleStyle = {
+            fontSize: '200%'
+        }
+
+        const slideStyle = this.props.isDisplay === 'true' ? {} : {display: 'none'};
 
         return (
-            <div style={slideStyle}>Hello {this.props.name}, {this.props.color}!!</div>
+            <div style={slideStyle}>
+                <p style={titleStyle}>■ {this.props.title}</p>
+                {this.props.contents.map((c) => {
+                    return (
+                        <p>{c}</p>
+                    )
+                })}
+            </div>
         )
     }
 }
