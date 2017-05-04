@@ -10,12 +10,21 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
+        <SlideRoot />
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
     );
   }
+}
+
+class SlideRoot extends Component {
+    render() {
+        return (
+            <div>Hello SlideRoot!!</div>
+        )
+    }
 }
 
 export default App;
